@@ -1,0 +1,5 @@
+peft
+transformers
+bitsandbytes
+datasets
+fire
