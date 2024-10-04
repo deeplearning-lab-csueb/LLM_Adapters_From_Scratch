@@ -70,6 +70,9 @@ def train(
     # Number of update steps to accumulate the gradients for
     gradient_accumulation_steps = 1
 
+    # Maximum number of checkpoint
+    save_total_limit = 3
+    
     # Enable gradient checkpointing
     gradient_checkpointing = True
 
@@ -136,6 +139,7 @@ def train(
         eval_steps=eval_step if val_set_size > 0 else None,
         save_steps=save_step,
         output_dir=output_dir,
+        save_total_limit=save_total_limit,
         max_grad_norm=max_grad_norm,
         load_best_model_at_end=True if val_set_size > 0 else False,
         warmup_ratio=warmup_ratio,

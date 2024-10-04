@@ -3,3 +3,5 @@ transformers
 bitsandbytes
 datasets
 fire
+evaluate
+scikit-learn
